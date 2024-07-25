@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    max-width: 1080px;
+    margin: auto;
+    background-color: black;
+}
+
+/* Estlizando o Header */
+.nav-links {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    display: inline;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 0 50px 10px 0;
+    font-size: 20px;
+    position: relative;
+    color: rgb(153, 147, 147);
+}
+
+/* Criando a animação dos links */
+.nav-links a::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.nav-links a:hover::after{
+    width: 90%;
+}
+
+
+/* Estilizando os títulos */
+.titulo {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.descricao {
+    color: #9e9c9c;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Definindo a área das sections */
+main section {
+    margin: 30px 0 0 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.sobre div p {
+    width: 600px;
+}
+
+.sobre div img {
+    border-radius: 25%;
+    border: 2px solid white;
+}
+
+.repos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.repo-item {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #3d3a3a;
+}
+
+.repo-item a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0366d6;
+}
+
+.repo-item p {
+    font-size: 12px;
+    color: #333;
+}
+
+.techs div {
+    padding: 30px;
+    background-color: #3d3a3a;
+    border-radius: 10px;
+    animation: dueColors 5s infinite;
+}
+
+.techs div ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.techs div ul li {
+    list-style: none;
+}
+
+.techs div ul li img {
+    width: 50px;
+    height: 50px;
+}
+
+.projetos, .techs {
+    padding: 20px;
+}
+
+.contatos div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contatos div a img {
+    width: 50px;
+    height: 50px;
+}
+
+strong {
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+    color: #fff;
+    background-color: #3d3a3a;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links.show {
+        display: block;
+    }
+    .nav-links ul {
+        flex-direction: column;
+    }
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+}
