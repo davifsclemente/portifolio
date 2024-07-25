@@ -6,13 +6,30 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             data.forEach(repo => {
-                const listItem = document.createElement('li');
+                const repoItem = document.createElement('div');
+                repoItem.classList.add('repo-item');
+                
                 const link = document.createElement('a');
                 link.href = repo.html_url;
                 link.textContent = repo.name;
+                link.title = repo.name;
                 link.target = '_blank';
-                listItem.appendChild(link);
-                repoList.appendChild(listItem);
+                link.style.color = 'yellow';
+                
+                const description = document.createElement('p');
+                description.textContent = repo.description || 'projeto sem descrição.';
+                description.style.color = 'white';
+
+                repoItem.appendChild(link);
+                repoItem.appendChild(description);
+                repoList.appendChild(repoItem);
             });
         }).catch(error => console.error('Erro ao buscar repositórios:', error));
+});
+
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.getElementById('nav-links');
+
+menuBtn.addEventListener('click', function() {
+    navLinks.classList.toggle('show');
 });
