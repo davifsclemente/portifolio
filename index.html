@@ -9,9 +9,9 @@
 </head>
 
 <body>
-
     <header>
-        <nav>
+        <button id="menu-btn" class="menu-btn">...</button>
+        <nav id="nav-links" class="nav-links">
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
@@ -20,65 +20,76 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <section class="sobre">
+        <section id="sobre" class="sobre">
             <h2 class="titulo">SOBRE</h2>
             <div>
-                <p>
+                <p class="descricao">
                     Atualmente estou cursando um técnico em desenvolvimento de Sistemas pela instituição Grau Técnico na
-                    unidade Recife Boa Vista.<br>
-                    Já trabalhei em alguns pequenos projetos que estão disponíveis no GitHub(Link disponível abaixo da
-                    foto
-                    de perfil) e ajudei algumas pessoas com trabalhos acadêmicos envolvendo programação. <br>
-                    Sem mais nem menos, estou disponível para trabalhar e adquirir experiência para me tornar um
+                    unidade Recife Boa Vista.<br><br>
+                    Já trabalhei em alguns pequenos projetos que estão disponíveis no GitHub e ajudei algumas pessoas
+                    com trabalhos acadêmicos envolvendo programação. <br><br>
+                    Sem mais delongas, estou disponível para trabalhar e adquirir experiência para me tornar um
                     profissional de qualidade. <br><br>
                     Abraços!
                 </p>
                 <img src="./assets/davi.jpg" alt="Imagem do Desenvolvedor" width="256" height="256">
             </div>
-
         </section>
-
-        <section class="projetos">
+        <section id="projetos" class="projetos">
             <h2 class="titulo">PROJETOS</h2>
             <div>
-                <p>
+                <p class="descricao">
                     Aqui estão alguns dos meus projetos disponíveis no GitHub.
                 </p>
-                <ul id="repositorios"></ul>
+                <div id="repositorios" class="repos-container"></div>
             </div>
         </section>
-
-        <section class="techs">
+        <section id="techs" class="techs">
             <h2 class="titulo">TECNOLOGIAS e FERRAMENTAS</h2>
+            <p class="descricao">
+                Aqui estão algumas das tecnologias e ferramentas que eu já trabalhei e estou estudando atualmente.
+            </p>
             <div>
-                <p>
-                    Aqui estão algumas das tecnologias e ferramentas que eu já trabalhei e estou estudando atualmente.
-                </p>
                 <ul>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Imagem do HTML" width="28px" height="28px">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                            alt="Imagem do HTML">
                     </li>
-                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Imagem do CSS" width="28px" height="28px"></li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Imagem do JavaScript" width="28px" height="28px"></li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                            alt="Imagem do CSS">
+                    </li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" alt="Imagem do Git" width="28px" height="28px"></li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                            alt="Imagem do JavaScript">
+                    </li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Imagem do Java" width="28px" height="28px"></li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg"
+                            alt="Imagem do Git">
+                    </li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="Imagem do PostgreSQL" width="28px" height="28px"></li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                            alt="Imagem do Java">
+                    </li>
                     <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Imagem do Spring Boot" width="28px" height="28px"></li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                            alt="Imagem do PostgreSQL">
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+                            alt="Imagem do Spring Boot">
+                    </li>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                            alt="Imagem do Postman" />
+                    </li>
                 </ul>
             </div>
-
         </section>
-
-        <section class="contato">
+        <section id="contatos" class="contatos">
             <h2 class="titulo">CONTATO</h2>
-            <p>
+            <p class="descricao">
                 Caso goste dos meus trabalhos e precisa de alguém como eu para suporte na sua equipe, você pode entrar
                 em contato comigo através dos links abaixo.
             </p>
@@ -88,17 +99,15 @@
             </div>
         </section>
     </main>
-
     <footer>
-        <h2 class="titulo">Anotações do Desenvolvedor</h2>
-        <p>
-            Portifólio desenvolvido por Davi Clemente como base de estudos em HTML, CSS e JavaScript.<br>
-            Este site serve para realizar uma apresentação sobre o desenvolvedor e trabalhos que ele se orgulha de ter
-            feito.<br>
-            Como ainda está em desenvolvimento, não haverá nada de projetos aqui. Pedimos compreensão e paciência.<br>
+        <h2 class="titulo">OBSERVAÇÕES</h2>
+        <p class="descricao">
+            Portifólio desenvolvido por <strong>Davi Clemente</strong> como base de estudos em HTML, CSS e
+            JavaScript.<br>
+            Pedimos compreensão e paciência, pois
+            este site andará conforme o aprendizado do desenvolvedor.<br>
         </p>
     </footer>
-
     <script src="/JS/index.js"></script>
 </body>
 
