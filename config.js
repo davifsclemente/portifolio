@@ -7,14 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             data.forEach(repo => {
                 const repoItem = document.createElement('div');
-                repoItem.classList.add('repo-item');
+                repoItem.classList.add('projetos-repositorio');
+                repoItem.style.alignContent = 'center';
+                repoItem.style.textAlign = 'center';
                 
                 const link = document.createElement('a');
                 link.href = repo.html_url;
                 link.textContent = repo.name;
-                link.title = repo.name;
                 link.target = '_blank';
-                link.style.color = 'yellow';
+                link.style.color = 'orange';
                 
                 const description = document.createElement('p');
                 description.textContent = repo.description || 'projeto sem descrição.';
@@ -25,11 +26,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 repoList.appendChild(repoItem);
             });
         }).catch(error => console.error('Erro ao buscar repositórios:', error));
-});
-
-const menuBtn = document.getElementById('menu-btn');
-const navLinks = document.getElementById('nav-links');
-
-menuBtn.addEventListener('click', function() {
-    navLinks.classList.toggle('show');
 });
