@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Ajustando o largura do conteúdo na tela e os backgrounds */
 
 body {
@@ -32,6 +36,23 @@ header nav li {
 header nav li a {
     color: rgb(7, 183, 183);
     text-decoration: none;
+    position: relative;
+    font-size: 16px;
+}
+
+header nav li a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+header nav li a:hover::after {
+    width: 100%;
 }
 
 header nav li a:hover {
@@ -42,7 +63,7 @@ header nav li a:hover {
     font-family: 'Courier New', monospace;
     text-align: center;
     color: yellow;
-    font-size: 40px;
+    font-size: 30px;
     margin: 20px 0 20px 0;
 }
 
@@ -71,12 +92,6 @@ header nav li a:hover {
 
 .sobre div p a {
     color: rgb(55, 255, 0);
-}
-
-.sobre div img {
-    align-items: center;
-    border-radius: 25%;
-    border: 2px solid white;
 }
 
 hr {
@@ -172,4 +187,10 @@ footer .descricao {
     text-align: center;
     margin-bottom: 40px;
     color: gray;
+}
+
+iframe {
+    align-items: center;
+    border-radius: 25%;
+    border: 2px solid white;
 }
