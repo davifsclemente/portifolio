@@ -38,11 +38,6 @@ header nav li a:hover {
     color: #b0acac;
 }
 
-/* Modificando a section "sobre" */
-.sobre {
-    /* margin: 50px 0 50px 0; */
-}
-
 .titulo {
     font-family: 'Courier New', monospace;
     text-align: center;
