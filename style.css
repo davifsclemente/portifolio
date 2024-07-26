@@ -4,133 +4,139 @@
     box-sizing: border-box;
 }
 
+/* Ajustando o largura do conteúdo na tela e os backgrounds */
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Franklin Gothic Medium', sans-serif;
     color: white;
     max-width: 1080px;
     margin: auto;
     background-color: black;
 }
 
-/* Estlizando o Header */
-.nav-links {
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.nav-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Estilizando e ajustando os links do cabeçalho */
+header nav {
     display: flex;
-}
-
-.nav-links li {
-    display: inline;
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    padding: 0 50px 10px 0;
-    font-size: 20px;
-    position: relative;
-    color: rgb(153, 147, 147);
-}
-
-/* Criando a animação dos links */
-.nav-links a::after {
-    content: " ";
-    width: 0%;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: 0.5s ease-in-out;
-}
-
-.nav-links a:hover::after{
-    width: 90%;
-}
-
-
-/* Estilizando os títulos */
-.titulo {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px 0 0 0;
-}
-
-.descricao {
-    color: #9e9c9c;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-/* Definindo a área das sections */
-main section {
-    margin: 30px 0 0 30px;
-    align-items: center;
     justify-content: center;
+}
+
+header nav ul {
+    margin: 30px;
+}
+
+header nav li {
+    display: inline;
+    padding: 20px;
+}
+
+header nav li a {
+    color: rgb(7, 183, 183);
+    text-decoration: none;
+}
+
+header nav li a:hover {
+    color: #b0acac;
+}
+
+/* Modificando a section "sobre" */
+.sobre {
+    /* margin: 50px 0 50px 0; */
+}
+
+.titulo {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    color: yellow;
+    font-size: 40px;
+    margin: 20px 0 20px 0;
 }
 
 .sobre div {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 30px;
-    gap: 30px;
 }
 
 .sobre div p {
-    width: 600px;
+    width: 55%;
+    color: #b0acac;
+}
+
+.sobre div p .nome {
+    color: cyan;
+}
+
+.sobre div p .cargo {
+    color: #ff8c00;
+}
+
+.sobre div p .curso {
+    color: rgb(236, 185, 122);
+}
+
+.sobre div p a {
+    color: rgb(55, 255, 0);
 }
 
 .sobre div img {
+    align-items: center;
     border-radius: 25%;
     border: 2px solid white;
 }
 
-.repos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
+hr {
+    margin: 20px;
 }
 
-.repo-item {
-    border: 1px solid #ddd;
-    padding: 16px;
-    border-radius: 8px;
-    background-color: #3d3a3a;
+.projetos {
+    padding: 10px;
 }
 
-.repo-item a {
-    font-weight: bold;
-    text-decoration: none;
-    color: #0366d6;
+.projetos .descricao {
+    text-align: center;
 }
 
-.repo-item p {
-    font-size: 12px;
-    color: #333;
-}
-
-.techs div {
-    padding: 30px;
-    background-color: #3d3a3a;
-    border-radius: 10px;
-    animation: dueColors 5s infinite;
-}
-
-.techs div ul {
+.repositorios {
     display: flex;
     justify-content: space-evenly;
+    margin: 40px 0 10px 0;
 }
 
-.techs div ul li {
+.projetos-repositorio {
+    padding: 20px;
+    border: 1px solid orange;
+    border-radius: 10px;
+}
+
+.projetos-repositorio a {
+    text-decoration: none;
+}
+
+.projetos-repositorio p {
+    font-size: 11px;
+}
+
+.techs {
+    padding: 10px;
+}
+
+.techs .descricao {
+    text-align: center;
+}
+
+.techs ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0 20px 0;
+}
+
+.techs li {
     list-style: none;
+}
+
+.techs li img:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
 }
 
 .techs div ul li img {
@@ -138,8 +144,8 @@ main section {
     height: 50px;
 }
 
-.projetos, .techs {
-    padding: 20px;
+.contatos {
+    padding: 10px;
 }
 
 .contatos div {
@@ -148,38 +154,27 @@ main section {
     gap: 30px;
 }
 
+.contatos .descricao {
+    text-align: center;
+}
+
 .contatos div a img {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
+    margin: 40px 0 5px 0;
 }
 
-strong {
-    color: white;
+.contatos div a img:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
 }
 
-.menu-btn {
-    display: none;
-    color: #fff;
-    background-color: #3d3a3a;
-    border: none;
+footer {
     padding: 10px;
-    cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-    .nav-links {
-        display: none;
-    }
-    .nav-links.show {
-        display: block;
-    }
-    .nav-links ul {
-        flex-direction: column;
-    }
-    .nav-links ul li {
-        margin: 10px 0;
-    }
+footer .descricao {
+    text-align: center;
+    margin-bottom: 40px;
+    color: gray;
 }
