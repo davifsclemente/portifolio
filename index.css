@@ -102,6 +102,12 @@ header nav li a:hover::after {
     color: rgb(55, 255, 0);
 }
 
+.sobre div img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+}
+
 hr {
     margin: 20px;
 }
@@ -177,8 +183,68 @@ footer .descricao {
     color: gray;
 }
 
-iframe {
-    align-items: center;
-    border-radius: 25%;
-    border: 2px solid white;
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 20px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    .contatos img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sobre div img {
+        width: 180px;
+        height: 180px;
+        transition: 0.4s all;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .titulo {
+        font-size: 22px;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    .contatos img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .sobre div img {
+        width: 220px;
+        height: 220px;
+        transition: 0.4s all;
+    }
+}
+
+/* Estilos para televisões */
+@media (min-width: 1921px) {
+    .titulo {
+        font-size: 28px;
+    }
+
+    .descricao {
+        font-size: 18px;
+    }
+
+    .contatos img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sobre div img {
+        width: 350px;
+        height: 350px;
+        transition: 0.4s;
+    }
 }
