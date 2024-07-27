@@ -1,29 +1,29 @@
+// Função para pegar os repositórios do GitHub e exibir na página.
 document.addEventListener('DOMContentLoaded', function() {
     const username = 'davifsclemente'; // Substitua pelo seu nome de usuário do GitHub
-    const repoList = document.getElementById('repositorios');
+    const divRepositorios = document.getElementById('repositorios'); // Substitua pelo id da da div onde os repositórios serão exibidos
 
     fetch(`https://api.github.com/users/${username}/repos`)
         .then(response => response.json())
-        .then(data => {
-            data.forEach(repo => {
-                const repoItem = document.createElement('div');
-                repoItem.classList.add('projetos-repositorio');
-                repoItem.style.alignContent = 'center';
-                repoItem.style.textAlign = 'center';
+        .then(data => {data.forEach(repo => {
+                const areaDoRepositorio = document.createElement('div');
+                areaDoRepositorio.classList.add('projetos-repositorio');
+                areaDoRepositorio.style.alignContent = 'center';
+                areaDoRepositorio.style.textAlign = 'center';
                 
-                const link = document.createElement('a');
-                link.href = repo.html_url;
-                link.textContent = repo.name;
-                link.target = '_blank';
-                link.style.color = 'orange';
+                const dadosDoRepositorio = document.createElement('a');
+                dadosDoRepositorio.href = repo.html_url;
+                dadosDoRepositorio.textContent = repo.name;
+                dadosDoRepositorio.target = '_blank';
+                dadosDoRepositorio.style.color = 'orange';
                 
-                const description = document.createElement('p');
-                description.textContent = repo.description || 'projeto sem descrição.';
-                description.style.color = 'white';
+                const descricaoDoRepositorio = document.createElement('p');
+                descricaoDoRepositorio.textContent = repo.description || 'Projeto sem descrição.';
+                descricaoDoRepositorio.style.color = 'white';
 
-                repoItem.appendChild(link);
-                repoItem.appendChild(description);
-                repoList.appendChild(repoItem);
+                areaDoRepositorio.appendChild(dadosDoRepositorio);
+                areaDoRepositorio.appendChild(descricaoDoRepositorio);
+                divRepositorios.appendChild(areaDoRepositorio);
             });
-        }).catch(error => console.error('Erro ao buscar repositórios:', error));
+        }).catch(error => console.error('Erro ao pegar os repositórios:', error));
 });
