@@ -4,67 +4,75 @@
     box-sizing: border-box;
 }
 
+/* Permite que o scroll do site seja suave */
 html {
     scroll-behavior: smooth;
 }
 
-/* Ajustando o largura do conteúdo na tela e os backgrounds */
-
+/* Definições gerais */
 body {
-    font-family: 'Franklin Gothic Medium', sans-serif;
-    color: white;
-    max-width: 1080px;
-    margin: auto;
-    background-color: black;
+    font-family: 'Franklin Gothic Medium', sans-serif; /* Fonte do texto */
+    color: white; /* Cor do texto */
+    max-width: 1080px; /* Largura máxima do página */
+    margin: auto; /* Centraliza a página */
+    background-color: black; /* Cor do plano de fundo */
 }
 
-/* Estilizando e ajustando os links do cabeçalho */
+/* Estilização do header */
 header nav {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Faz com que os elementos fiquem em linha */
+    justify-content: center; /* Centraliza os elementos */
 }
 
 header nav ul {
-    margin: 30px;
+    margin: 30px; /* Espaçamento entre o header e o conteúdo */
 }
 
 header nav li {
-    display: inline;
-    padding: 20px;
+    display: inline; /* Faz com que os links fiquem em linha */
+    padding: 20px; /* Espaçamento entre os links */
 }
 
 header nav li a {
-    color: rgb(7, 183, 183);
-    text-decoration: none;
-    position: relative;
-    font-size: 16px;
+    color: rgb(7, 183, 183); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    position: relative; /* Permite que o ::after seja posicionado em relação ao link */
+    font-size: 16px; /* Tamanho da fonte dos links */
 }
 
+
+header nav li a:hover {
+    color: #b0acac; /* Cor dos links ao passar o mouse em cima */
+}
+
+/* Animação de sublinhado crescente nos links */
 header nav li a::after {
-    content: " ";
-    width: 0%;
-    height: 2px;
-    background-color: yellow;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: 0.3s ease-in-out;
+    content: " "; /* Adiciona uma linha ao ::after */
+    width: 0%; /* Largura inicial da linha */
+    height: 1px; /* Grossura da linha */
+    background-color: yellow; /* Cor da linha */
+    position: absolute; /* Permite que a linha seja posicionada em relação ao link */
+    bottom: 0; /* Posiciona a linha abaixo do link */
+    left: 0; /* Posiciona a linha no início do link */
+    transition: 0.3s ease-in-out; /* Adiciona uma transição suave à linha */
 }
 
 header nav li a:hover::after {
-    width: 100%;
+    width: 100%; /* Largura final da linha */
 }
 
-header nav li a:hover {
-    color: #b0acac;
-}
-
+/* Difinição dos títulos da página */
 .titulo {
     font-family: 'Courier New', monospace;
     text-align: center;
     color: yellow;
     font-size: 30px;
     margin: 20px 0 20px 0;
+}
+
+/* Definição da descrição dos textos das seções */
+.descricao {
+    text-align: center;
 }
 
 .sobre div {
@@ -98,12 +106,8 @@ hr {
     margin: 20px;
 }
 
-.projetos {
+.projetos, .techs, .contatos {
     padding: 10px;
-}
-
-.projetos .descricao {
-    text-align: center;
 }
 
 .repositorios {
@@ -126,14 +130,6 @@ hr {
     font-size: 11px;
 }
 
-.techs {
-    padding: 10px;
-}
-
-.techs .descricao {
-    text-align: center;
-}
-
 .techs ul {
     display: flex;
     justify-content: space-evenly;
@@ -154,18 +150,10 @@ hr {
     height: 50px;
 }
 
-.contatos {
-    padding: 10px;
-}
-
 .contatos div {
     display: flex;
     justify-content: center;
     gap: 30px;
-}
-
-.contatos .descricao {
-    text-align: center;
 }
 
 .contatos div a img {
